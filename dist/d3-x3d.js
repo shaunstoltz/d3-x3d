@@ -2694,6 +2694,24 @@
    *
    * @module
    */
+<<<<<<< HEAD
+=======
+  function componentBubbles () {
+
+  	/* Default Properties */
+  	var dimensions = { x: 40, y: 40, z: 40 };
+  	var colors = d3.schemeRdYlGn[8];
+  	var color = void 0;
+  	var classed = "d3X3dBubbles";
+
+  	/* Scales */
+  	var xScale = void 0;
+  	var yScale = void 0;
+  	var zScale = void 0;
+  	var colorScale = void 0;
+  	var sizeScale = void 0;
+  	var sizeRange = [0.2, 4.0];
+>>>>>>> Small tidy.
 
 <<<<<<< HEAD
   function componentBubbles () {
@@ -3282,7 +3300,7 @@
   	var zScale = void 0;
   	var colorScale = void 0;
   	var sizeScale = void 0;
-  	var sizeRange = [0.5, 4.0];
+  	var sizeRange = [0.2, 4.0];
 
   	/**
     * Array to String
@@ -3378,6 +3396,7 @@
   					});
   				};
 
+<<<<<<< HEAD
   				var pointCoords = function pointCoords(Y) {
   					return Y.values.map(function (d) {
   						var xVal = d.values.find(function (v) {
@@ -3402,6 +3421,14 @@
   						return colorParse(color);
   					});
   				};
+=======
+  				shape.append("Sphere").attr("radius", function (d) {
+  					var sizeVal = d.values.find(function (v) {
+  						return v.key === mappings.size;
+  					}).value;
+  					return sizeScale(sizeVal);
+  				});
+>>>>>>> Small tidy.
 
   				data.point = array2dToString(pointCoords(data));
   				data.color = array2dToString(pointColors(data));
@@ -3582,6 +3609,7 @@
 >>>>>>> Experimenting with ParticleSet.
 
 
+<<<<<<< HEAD
     my.zScale = function (_v) {
       if (!arguments.length) return zScale;
       zScale = _v;
@@ -3593,6 +3621,15 @@
      * @param {d3.scale} _v - D3 color scale.
      * @returns {*}
      */
+=======
+  	/* Scales */
+  	var xScale = void 0;
+  	var yScale = void 0;
+  	var zScale = void 0;
+  	var colorScale = void 0;
+  	var sizeScale = void 0;
+  	var sizeRange = [0.2, 4.0];
+>>>>>>> Small tidy.
 
 
     my.colorScale = function (_v) {
@@ -3765,6 +3802,14 @@
      * @returns {*}
      */
 
+<<<<<<< HEAD
+=======
+  			var appearance = particleSelect.append("Appearance");
+  			appearance.append("Material");
+  			appearance.append("DepthMode").attr("readOnly", "true");
+  			// appearance.append("ImageTexture")
+  			//	.attr("url", "./circle_texture.png");
+>>>>>>> Small tidy.
 
     my.xScale = function (_v) {
       if (!arguments.length) return xScale;
@@ -7585,8 +7630,12 @@
   	var zScale = void 0;
   	var colorScale = void 0;
   	var sizeScale = void 0;
+<<<<<<< HEAD
   	var sizeRange = [0.5, 4.0];
 >>>>>>> Experimenting with ParticleSet.
+=======
+  	var sizeRange = [0.2];
+>>>>>>> Small tidy.
 
 <<<<<<< HEAD
 
@@ -7882,7 +7931,7 @@
   	var zScale = void 0;
   	var colorScale = void 0;
   	var sizeScale = void 0;
-  	var sizeRange = [0.5, 4.0];
+  	var sizeRange = [0.2, 4.0];
 
   	/* Components */
   	var viewpoint = component.viewpoint();
